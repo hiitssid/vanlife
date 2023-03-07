@@ -1,0 +1,153 @@
+.van-list-container {
+    
+}
+.van-list-container .pagetitle{
+    margin: 0 0 2rem 1rem;
+    font-size: 1.3rem;
+}
+
+.van-list {
+    margin: 0 20px;
+    /* display: grid; */
+    /* grid-template-columns:repeat(2,1fr); */
+    gap: 2rem;
+}
+
+.van-card {
+    /* outline: 1px solid lime; */
+    background-color: #7DB9B6;
+    border-radius: 15px;
+    /* width: 400px; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-bottom: 20px;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.van-card img {
+    max-width: 100%;
+    padding: 1rem;
+    /* width: 320px; */
+    /* height: 100px; */
+    border-radius: 30px;
+}
+.van-card_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    color: #ffffff;
+}
+.van-card_details h1{
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.van-type-mobile{
+    background-color: #B61919;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #eee;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+}
+
+.van-type-pc{
+    background:#B61919;
+    width: fit-content;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #eee;
+    display: none;
+}
+
+
+/* Extra small devices (phones) */
+@media (max-width: 576px) { 
+    /* Styles for phones go here */ 
+  }
+  
+  /* Small devices (tablets) */
+  @media (min-width: 576px) {
+    /* Styles for tablets go here */ 
+    .van-list {
+        margin: 0 50px;
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        gap: 2rem;
+    }
+  }
+  
+  /* Medium devices (desktops) */
+  @media (min-width: 768px) { 
+    .van-list {
+        margin: 0 100px;
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        gap: 2rem;
+    }
+    
+    .van-type-mobile{
+        display: none;
+    }
+    .van-type-pc{
+        display: inline;
+  }
+}
+  
+  /* Large devices (desktops) */
+  @media (min-width: 1200px) { 
+    
+    .van-list {
+        margin: 0 100px;
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+        gap: 2rem;
+    }
+    .van-card_details{
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+    }
+    
+  }
+  
+  /* Extra large devices (large desktops) */
+  @media (min-width: 1440px) { 
+    .van-list {
+        margin: 0 200px;
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+        gap: 2rem;
+    }
+    .van-card {
+        /* outline: 1px solid lime; */
+        background-color: #7DB9B6;
+        border-radius: 50px;
+        /* width: 400px; */
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    .van-card_details{
+        padding-bottom: 0;
+        padding-left: 0;
+    }
+    .van-card img {
+        max-width: 100%;
+        padding: 1rem;
+        width: 250px;
+        height: auto;
+        border-radius: 50px;
+    }
+    .van-list-container .pagetitle{
+        margin: 0 0 3rem 1rem;
+        font-size: 2rem;
+    }
+  }

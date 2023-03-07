@@ -1,0 +1,33 @@
+.about-page-container{
+    color: #fff;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),url('https://picsum.photos/id/339/1920?blur=7') no-repeat center center;
+    height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.about-page-content h1{
+    font-size: 4rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+.about-page-content p{
+    /* margin: 0 100px; */
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.1rem;
+    
+}
+
+.about-page-cta{
+   padding: 20px;
+   text-align: center;
+    /* background-color: #FFCC8D; */
+}
+.about-page-cta h2{
+    font-size: 2.2rem;
+ margin-bottom: 2rem;   
+}
