@@ -57,6 +57,24 @@ header a:hover {
     transition: transform .1s ease-in-out;
 }
 
+.site-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #161616;
+    color: #AAAAAA;
+    height: 74px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    font-weight: 500;
+}
+
 
 /* Extra small devices (phones) */
 @media (max-width: 576px) { 
