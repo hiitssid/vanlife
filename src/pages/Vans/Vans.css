@@ -18,7 +18,7 @@ a{
 
 .van-card {
     /* outline: 1px solid lime; */
-    background-color: #7DB9B6;
+    background-color: #fff;
     border-radius: 15px;
     /* width: 400px; */
     /* display: flex; */
@@ -42,7 +42,7 @@ a{
     justify-content: space-between;
     padding-bottom: 2rem;
     padding-left: 1rem;
-    color: #ffffff;
+    color: #000;
 }
 .van-card_details h1{
     font-size: 1.5rem;
