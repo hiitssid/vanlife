@@ -5,7 +5,7 @@ a{
     
 }
 .van-list-container .pagetitle{
-    margin: 0 0 2rem 1rem;
+    margin: 1rem;
     font-size: 1.3rem;
 }
 
@@ -46,7 +46,7 @@ a{
 }
 .van-card_details h1{
     font-size: 1.5rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 1.3rem;
 }
 
 .van-type-mobile{
@@ -63,12 +63,34 @@ a{
     background:#B61919;
     width: fit-content;
     padding: 5px 10px;
-    margin-top: 10px;
+    margin-top: 1.3rem;
     border-radius: 5px;
     color: #eee;
     display: none;
 }
 
+.filter-buttons{
+   margin-bottom: 1rem;
+   margin-right: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.filter-btn{
+    border: 1px solid #B61919;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #B61919;
+  cursor: pointer;
+}
+
+.selected{
+    border: 2px solid #fff;
+    background: #B61919;
+    color: #fff;
+}
 
 /* Extra small devices (phones) */
 @media (max-width: 576px) { 
@@ -101,6 +123,8 @@ a{
     .van-type-pc{
         display: inline;
   }
+  .filter-buttons{
+    margin-bottom: 2rem;}
 }
   
   /* Large devices (desktops) */
@@ -129,7 +153,7 @@ a{
     }
     .van-card {
         /* outline: 1px solid lime; */
-        background-color: #7DB9B6;
+        /* background-color: #7DB9B6; */
         border-radius: 50px;
         /* width: 400px; */
         display: flex;
@@ -150,7 +174,7 @@ a{
         border-radius: 50px;
     }
     .van-list-container .pagetitle{
-        margin: 0 0 3rem 1rem;
+        /* margin: 0 0 3rem 1rem; */
         font-size: 2rem;
     }
   }
