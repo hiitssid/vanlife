@@ -1,16 +1,32 @@
 import "./Vans.css";
 import { Link, useSearchParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { getVans } from "../../api";
 export default function Vans() {
-  const [vans, setVans] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [vans, setVans] = useState([]);
+
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
+  
+
   const typeFilter = searchParams.get("type");
   // console.log(typeFilter);
 
   useEffect(() => {
-    fetch("/api/vans")
-      .then((res) => res.json())
-      .then((data) => setVans(data.vans));
+    async function loadVans() {
+      //getVans() from api.js
+      setLoading(true) //awating when fetching api; set Loading to true : shows loading message on DOM
+      try{
+        const data = await getVans();
+        setVans(data);
+      } catch(err) {
+        setError(err)
+      }finally{
+        setLoading(false) //after data is received Loading is set to false : removes loading message from DOM
+      }
+    }
+    loadVans();
   }, []);
   //filter the vans, adding filtering funtionality
   const filteredItems = typeFilter
@@ -19,7 +35,10 @@ export default function Vans() {
   //map the filtered data, if condition is true filtered items are pass, if false all vans are passed
   const vanElements = filteredItems.map((van) => (
     //state ={{search: searchParams.toString() is added to pass it to another linked page, passed to url as history }}
-    <Link to={`/vans/${van.id}`} state={{search : `?${searchParams.toString()}`, type : typeFilter}}>
+    <Link
+      to={`/vans/${van.id}`}
+      state={{ search: `?${searchParams.toString()}`, type: typeFilter }}
+    >
       <div key={van.id} className="van-card">
         <img src={van.imageUrl} alt={van.name} />
         <span className="van-type-mobile">{van.type}</span>
@@ -42,6 +61,13 @@ export default function Vans() {
       return prevParams;
     });
   }
+
+if(loading){ //if Loading is true => shows this message on DOM, if false below jsx is rendered to DOM
+  return <h1>Loading...</h1>
+}
+if(error){
+  return <per>There was an error : {error.message}</per>
+}
 
   return (
     <div className="van-list-container">
